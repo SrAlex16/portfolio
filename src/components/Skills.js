@@ -1,12 +1,14 @@
 import React from 'react'
 
-import meter1 from "../assets/img/meter1.svg"; //95%
-import meter2 from "../assets/img/meter2.svg"; //80%
-import meter3 from "../assets/img/meter3.svg"; //90%
+import PropTypes from 'prop-types';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
@@ -30,6 +32,45 @@ export const Skills = () => {
     }
   };
 
+  const theme = createTheme({
+    palette: {
+      primary: grey
+    },
+  })
+  
+  function CircularProgressWithLabel(props) {
+    return (
+      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+        <CircularProgress variant="determinate" size={170} {...props} theme={theme}/>
+        <Box
+          sx={{
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            position: 'absolute',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Typography component="div" variant='h4' fontFamily={'Qanelas Heavy'}><strong>
+            {`${Math.round(props.value)}%`}
+            </strong></Typography>
+        </Box>
+      </Box>
+    );
+  }
+
+  CircularProgressWithLabel.propTypes = {
+    /**
+     * The value of the progress indicator for the determinate variant.
+     * Value between 0 and 100.
+     * @default 0
+     */
+    value: PropTypes.number.isRequired,
+  };
+
   //pedir ayuda a mario para poner los graficos
   return (
     <section className="skill" id="skills">
@@ -41,20 +82,20 @@ export const Skills = () => {
                         <p>Lenguajes y tecnologías que manejo principalmente</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Kotlin Development</h5>
+                              <CircularProgressWithLabel value={50} />
+                              <h5>Kotlin Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Java Development</h5>
+                              <CircularProgressWithLabel value={80} />
+                              <h5>Java Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>JS Development</h5>
+                              <CircularProgressWithLabel value={30} />
+                              <h5>JS Development</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>SQL Development</h5>
+                              <CircularProgressWithLabel value={60} />
+                              <h5>SQL Development</h5>
                             </div>
                         </Carousel>
                     </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
@@ -45,6 +46,29 @@ export const Contact = () => {
     }
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3mqgzdb",
+        "template_wu0gndj",
+        form.current,
+        "jWARIyZvyPIKmXBI-"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section className="contact" id="connect">
       <Container>
@@ -61,7 +85,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Contacto</h2>
-                <form onSubmit={handleSubmit}>
+                <form ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" value={formDetails.firstName} placeholder="Nombre" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
