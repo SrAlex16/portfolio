@@ -30,14 +30,16 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
     console.log("entro en sendEmail()")
     console.log("nombre: "+formDetails.firstName)
 
-    if((formDetails.firstName.length == 0)||(formDetails.lastName.length == 0)||(formDetails.email.length == 0)||(formDetails.message.length == 0))
+    if((formDetails.firstName.length === 0)||(formDetails.lastName.length === 0)||(formDetails.email.length === 0)||(formDetails.message.length === 0))
     {
       alert("Debes rellenar todos los campos obligatorios (*)")
     }else{
+      
+      setButtonText("Mensaje enviado")
       emailjs
       .sendForm(
         "service_3mqgzdb",
@@ -50,11 +52,13 @@ export const Contact = () => {
           console.log(result.text);
           console.log("message sent");
           console.log(formDetails.firstName);
+          alert("mensaje enviado") //cambiar esto
         },
         (error) => {
           console.log(error.text);
         }
       );
+      setButtonText("Enviar")
     }
   };
 
@@ -63,10 +67,11 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <TrackVisibility>
+          <TrackVisibility>
               {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
-              }
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img class="img" src={contactImg} alt="contact img"/>
+                </div>}
             </TrackVisibility>
           </Col>
           <Col size={12} md={6}>
@@ -74,7 +79,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Contacto</h2>
-                <form ref={form} onSubmit={sendEmail}>
+                <form id="1" ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input name="firstName" type="text" value={formDetails.firstName} placeholder="Nombre *" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
