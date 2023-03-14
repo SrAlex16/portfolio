@@ -616,3 +616,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+.img{
+  filter: contrast(30%);
+}
+
+.imgLogo{
+  filter: contrast(30%);
+}
+
+.imgLogo2{
+  filter: contrast(200%);
+}
