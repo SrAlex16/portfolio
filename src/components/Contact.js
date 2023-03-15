@@ -52,13 +52,14 @@ export const Contact = () => {
           console.log(result.text);
           console.log("message sent");
           console.log(formDetails.firstName);
-          alert("mensaje enviado") //cambiar esto
+          //alert("mensaje enviado") //cambiar esto
+          window.location.reload(); //refresco la página para borrar los campos del formulario
         },
         (error) => {
           console.log(error.text);
         }
       );
-      setButtonText("Enviar")
+      setButtonText("Mensje Enviado")
     }
   };
 
@@ -79,7 +80,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Contacto</h2>
-                <form id="1" ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input name="firstName" type="text" value={formDetails.firstName} placeholder="Nombre *" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
