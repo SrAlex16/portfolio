@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme} from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
 
 import Carousel from 'react-multi-carousel';
@@ -87,11 +87,11 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={80} />
-                              <h5>Java Development</h5>
+                              <h5>Java Spring Boot</h5>
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={30} />
-                              <h5>JS Development</h5>
+                              <h5>JavaScript</h5>
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={60} />
