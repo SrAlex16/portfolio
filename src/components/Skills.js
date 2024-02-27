@@ -71,7 +71,6 @@ export const Skills = () => {
     value: PropTypes.number.isRequired,
   };
 
-  //pedir ayuda a mario para poner los graficos
   return (
     <section className="skill" id="skills">
         <div className="container">
