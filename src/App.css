@@ -432,6 +432,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
 }
 .proj-txtx {
+  text-decoration: none !important;
+  color: white;
   position: absolute;
   text-align: center;
   top: 65%;
@@ -442,6 +444,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 .proj-imgbx:hover .proj-txtx {
+  color: white;
   top: 50%;
   opacity: 1;
 }
