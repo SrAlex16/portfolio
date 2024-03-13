@@ -4,6 +4,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/icono_bgl.png";
 import projImg2 from "../assets/img/icono_afternight.jpg";
+import projImg3 from "../assets/img/icono_subbetica.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -22,6 +23,12 @@ export const Projects = () => {
       description: "Videojuego de plataformas para móviles android.",
       imgUrl: projImg2,
       link: 'https://github.com/SrAlex16/Afternight',
+    },
+    {
+      title: "Subbética Destino de Calidad Turística",
+      description: "Página web de la gestión de la calidad turística en la comarca de la Subbética Cordobesa",
+      imgUrl: projImg3,
+      link: 'https://subbeticadestinodecalidad.es',
     },
   ];
 
