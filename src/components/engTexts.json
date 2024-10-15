@@ -1,0 +1,23 @@
+{
+    "home": "Home",
+    "project": "Projects",
+    "connect": "Contact",
+
+    "tagline": "Welcome to my personal website",
+    "txt-rotate": "My website shows my development skills, outstanding experience with Java, SQL, HTML, CSS, JS, C# and Python. Also, I have been working with Kotlin, MongoDB y Hibernate, and I am continue learning to improve my skills.",
+
+    "skill-bx wow zoomIn": "outstanding software",
+
+    "proyecto1": "Table-games events managements android app.",
+    "proyecto2": "Android game.",
+    "proyecto3": "Website for tourism quality management in the Subbética region",
+    "proyectos": "Projects",
+    "proyectos-desc": "Projects developed by me, direct link to GitHub repository.",
+
+    "contacto": "Contact",
+    "firstName": "Name *",
+    "lastName": "Lastname *",
+    "phone": "Phone number",
+    "message": "Message *",
+    "enviarBtn": "Send"
+}

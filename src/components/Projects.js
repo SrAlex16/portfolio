@@ -9,8 +9,10 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Projects = () => {
+import { valorIdioma } from './NavBar.js';
 
+export const Projects = () => {
+  
   const projects = [
     {
       title: "My Gameboard Library",

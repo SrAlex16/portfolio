@@ -1,11 +1,29 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+
+import { NavBar } from './NavBar';
+
+export const navBarContext = createContext<NavBar>({})
+
+//export const useContext = () => useContext(navBarContext)
+
+const NavBarContextProvider = ({ settings, children }) => {
+  const [idioma, setIdioma] = useState()
+
+  return (
+    <navBarContext.Provider value={{ idioma, setIdioma}}>
+      {children}
+    </navBarContext.Provider>
+  )
+}
+
+export default NavBarContextProvider
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -28,7 +46,15 @@ export const Contact = () => {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e, { NavBar }) => {
+    const [idioma, setIdioma] = useContext(navBarContext)
+
+    if(idioma){
+      return(
+        <p> {idioma ? "English" : "Español"} </p>
+      )
+    }
+
     e.preventDefault();
     
     console.log("entro en sendEmail()")
@@ -36,9 +62,9 @@ export const Contact = () => {
 
     if((formDetails.firstName.length === 0)||(formDetails.lastName.length === 0)||(formDetails.email.length === 0)||(formDetails.message.length === 0))
     {
+      alert(NavBar.idioma)
       alert("Debes rellenar todos los campos obligatorios (*)")
     }else{
-      
       setButtonText("Mensaje enviado")
       emailjs
       .sendForm(
@@ -52,7 +78,6 @@ export const Contact = () => {
           console.log(result.text);
           console.log("message sent");
           console.log(formDetails.firstName);
-          //alert("mensaje enviado") //cambiar esto
           window.location.reload(); //refresco la página para borrar los campos del formulario
         },
         (error) => {
