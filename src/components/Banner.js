@@ -12,8 +12,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Java Developer", "Kotlin Developer", "Web Designer" ];
-  const period = 2000;
+  const toRotate = [ "Java Developer", "Kotlin Developer", "Cloud Architect (AWS)" ];
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -58,7 +58,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Bienvenido/a a mi Portfolio</span>
                 <h1>{`Hola! Soy Alejandro`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Java Developer", "Kotlin Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Mi porfolio web muestra mis habilidades en desarrollo de aplicaciones multiplataforma, con experiencia destacada en Java, SQL, HTML, CSS, JS, C# y Python. Además, he trabajado con Kotlin, MongoDB y Hibernate, y estoy comprometido a seguir aprendiendo para seguir mejorando mis habilidades.</p>
+                  <p>Aquí puede ver mis habilidades en el desarrollo de software, con experiencia destacada en Java, SQL, HTML, CSS, JS, C# y Python. Además, he trabajado con Kotlin, MongoDB e Hibernate. También tengo un bootcamp en Amazon Web Services (AWS) y estoy comprometido a seguir aprendiendo para seguir mejorando mis habilidades.</p>
               </div>}
             </TrackVisibility>
           </Col>

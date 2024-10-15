@@ -78,7 +78,7 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lenguajes y tecnologías que manejo principalmente</p>
+                        <p>Lenguajes y tecnologías que manejo</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                               <CircularProgressWithLabel value={50} />
@@ -89,11 +89,11 @@ export const Skills = () => {
                               <h5>Java Spring Boot</h5>
                             </div>
                             <div className="item">
-                              <CircularProgressWithLabel value={30} />
-                              <h5>JavaScript</h5>
+                              <CircularProgressWithLabel value={75} />
+                              <h5>AWS</h5>
                             </div>
                             <div className="item">
-                              <CircularProgressWithLabel value={60} />
+                              <CircularProgressWithLabel value={70} />
                               <h5>SQL Development</h5>
                             </div>
                         </Carousel>
