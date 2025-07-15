@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -11,7 +11,13 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
 
+import engTexts from './engTexts.json';
+import espTexts from './espTexts.json';
+import { LanguageContext } from './LanguageContext';
+
 export const Skills = () => {
+  const { language } = useContext(LanguageContext);
+  const texts = language === 'en' ? engTexts : espTexts;
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -77,24 +83,24 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lenguajes y tecnologías que manejo</p>
+                        <h2>{texts.skill.skill}</h2>
+                        <p>{texts.skill.text}</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                               <CircularProgressWithLabel value={50} />
-                              <h5>Kotlin Development</h5>
+                              <h5>{texts.skill.toRotate[0]}</h5>
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={80} />
-                              <h5>Java Spring Boot</h5>
+                              <h5>{texts.skill.toRotate[1]}</h5>
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={75} />
-                              <h5>AWS</h5>
+                              <h5>{texts.skill.toRotate[2]}</h5>
                             </div>
                             <div className="item">
                               <CircularProgressWithLabel value={70} />
-                              <h5>SQL Development</h5>
+                              <h5>{texts.skill.toRotate[3]}</h5>
                             </div>
                         </Carousel>
                     </div>

@@ -1,0 +1,46 @@
+{
+    "navbar": {
+        "language": "English",
+        "home": "Inicio",
+        "skills": "Habilidades",
+        "project": "Proyectos",
+        "connect": "Contacto"
+    },
+
+    "banner": {
+        "tagline": "Bienvenido a mi sitio web personal",
+        "txtRotate": "¡Hola! Soy Alejandro",
+        "txt": "En esta página puedes ver mis habilidades y experiencia destacadas en desarrollo Java, SQL, Angular, C# y Python. Además, he estado trabajando con Kotlin, MongoDB e Hibernate, y sigo aprendiendo constantemente para mejorar mis habilidades.",
+        "toRotate": ["Desarrollo Java", "Desarrollo Kotlin", "ArquitectoCloud (AWS)"]
+    },
+
+    "skill": {
+        "skill": "Habilidades",
+        "text": "Stack tecnológico destacado",
+        "toRotate": [
+            "Desarrollo Kotlin",
+            "Desarrollo Java",
+            "AWS",
+            "Desarrollo SQL"
+        ]
+    },
+
+    "proyects": {
+        "proyect1": "Aplicación android para gestionar eventos de juegos de mesa.",
+        "proyect2": "Juego de Android.",
+        "proyect3": "Sitio web sobre gestión de la calidad del turismo en la región de la Subbética",
+        "proyects": "Proyectos",
+        "proyectsDesc": "Proyectos desarrollados por mí, enlace directo al repositorio de GitHub."
+    },
+
+    "contact": {
+        "contact": "Contacto",
+        "firstName": "Nombre *",
+        "lastName": "Apellido *",
+        "email": "Correo electrónico *",
+        "phone": "Número de teléfono",
+        "message": "Mensaje *",
+        "sendBtn": "Enviar",
+        "sent": "Mensaje enviado"
+    }
+}

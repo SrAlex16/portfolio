@@ -1,18 +1,24 @@
-import React from 'react'
-
-import { useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import engTexts from './engTexts.json';
+import espTexts from './espTexts.json';
+import { LanguageContext } from './LanguageContext';
+
 export const Banner = () => {
+  // Obtener idioma del contexto global
+  const { language } = useContext(LanguageContext);
+  const texts = language === 'en' ? engTexts : espTexts;
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Java Developer", "Kotlin Developer", "Cloud Architect (AWS)" ];
+  // Use optional chaining and fallback to empty array
+  const toRotate = Array.isArray(texts.banner?.toRotate) ? texts.banner.toRotate : [];
   const period = 1000;
 
   useEffect(() => {
@@ -24,8 +30,9 @@ export const Banner = () => {
   }, [text])
 
   const tick = () => {
+    if (!Array.isArray(toRotate) || toRotate.length === 0) return;
     let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
+    let fullText = toRotate[i] || '';
     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
@@ -56,9 +63,9 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Bienvenido/a a mi Portfolio</span>
-                <h1>{`Hola! Soy Alejandro`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Java Developer", "Kotlin Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Aquí puede ver mis habilidades en el desarrollo de software, con experiencia destacada en Java, SQL, HTML, CSS, JS, C# y Python. Además, he trabajado con Kotlin, MongoDB e Hibernate. También tengo un bootcamp en Amazon Web Services (AWS) y estoy comprometido a seguir aprendiendo para seguir mejorando mis habilidades.</p>
+                <span className="tagline">{texts.banner.tagline}</span>
+                <h1>{texts.banner.txtRotate} <span className="txt-rotate" dataPeriod="1000" data-rotate={JSON.stringify(toRotate)}><span className="wrap">{text}</span></span></h1>
+                  <p>{texts.banner.txt}</p>
               </div>}
             </TrackVisibility>
           </Col>

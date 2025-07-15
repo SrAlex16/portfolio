@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
@@ -9,24 +9,30 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+import engTexts from './engTexts.json';
+import espTexts from './espTexts.json';
+import { LanguageContext } from './LanguageContext';
+
 export const Projects = () => {
+  const { language } = useContext(LanguageContext);
+  const texts = language === 'en' ? engTexts : espTexts;
 
   const projects = [
     {
       title: "My Gameboard Library",
-      description: "App de gestión de eventos de juegos de mesa.",
+      description: texts.proyects.proyect1,
       imgUrl: projImg1,
       link: 'https://github.com/Lander990/my-gameboard-library',
     },
     {
       title: "Afternight",
-      description: "Videojuego de plataformas para móviles android.",
+      description: texts.proyects.proyect2,
       imgUrl: projImg2,
       link: 'https://github.com/SrAlex16/Afternight',
     },
     {
       title: "Subbética Destino de Calidad Turística",
-      description: "Página web de la gestión de la calidad turística en la comarca de la Subbética Cordobesa",
+      description: texts.proyects.proyect3,
       imgUrl: projImg3,
       link: 'https://subbeticadestinodecalidad.es',
     },
@@ -40,8 +46,8 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Proyectos</h2>
-                <p>Proyectos realizados por mi, enlace directo al repositorio de GitHub.</p>
+                <h2>{texts.proyects.proyects}</h2>
+                <p>{texts.proyects.proyectsDesc}</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
