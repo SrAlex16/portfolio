@@ -1,0 +1,15 @@
+{
+  "installCommand": "npm install",
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--max-old-space-size=4096"
+    }
+  },
+  "framework": "create-react-app",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "node": "22.x"
+}
