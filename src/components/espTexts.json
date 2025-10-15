@@ -29,6 +29,7 @@
         "proyect1": "Aplicación android para gestionar eventos de juegos de mesa.",
         "proyect2": "Juego de Android.",
         "proyect3": "Sitio web sobre gestión de la calidad del turismo en la región de la Subbética",
+        "proyect4": "Proyecto de IA que implementa un sistema de recomendación de anime basado en contenido, analizando los gustos del usuario y usando TF-IDF y SVD para sugerir títulos similares aún no vistos.",
         "proyects": "Proyectos",
         "proyectsDesc": "Proyectos desarrollados por mí, enlace directo al repositorio de GitHub."
     },

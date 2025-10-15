@@ -5,6 +5,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/icono_bgl.png";
 import projImg2 from "../assets/img/icono_afternight.jpg";
 import projImg3 from "../assets/img/icono_subbetica.png";
+import projImg4 from "../assets/img/icono_animeia.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -35,6 +36,12 @@ export const Projects = () => {
       description: texts.proyects.proyect3,
       imgUrl: projImg3,
       link: 'https://subbeticadestinodecalidad.es',
+    },
+    {
+      title: "IA Recomendador de series",
+      description: texts.proyects.proyect4,
+      imgUrl: projImg4,
+      link: 'https://github.com/SrAlex16/Anime_recommender',
     },
   ];
 
