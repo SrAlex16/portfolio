@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/icono_bgl.png";
 import projImg2 from "../assets/img/icono_afternight.jpg";
@@ -78,7 +78,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt=""></img>
     </section>
   )
 }
