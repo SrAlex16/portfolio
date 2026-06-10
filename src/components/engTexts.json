@@ -10,25 +10,25 @@
     "banner": {
         "tagline": "Welcome to my personal website",
         "txtRotate": "Hi! I'm Alejandro",
-        "txt": "This website shows my development and experience in software development using Java, SQL, Angular, C# and Python. Also, I have been working with Kotlin, MongoDB and Hibernate. I'm continue learning to improve my skills.",
-        "toRotate": ["Java Developer", "Kotlin Developer", "Cloud Architect (AWS)"]
+        "txt": "Generative AI Engineer with production experience designing systems based on LLMs, RAG and Agentic AI on AWS. Expert in integrating Bedrock, Lambda and Python to automate real business processes. Solid background in Java backend development and scalable cloud architectures.",
+        "toRotate": ["Generative AI Engineer", "AWS Cloud Engineer", "Backend Developer"]
     },
 
     "skill": {
         "skill": "Skills",
         "text": "Featured tech stack",
         "toRotate": [
-            "Kotlin Development",
-            "Java Development",
-            "AWS",
-            "SQL Development"
+            "Generative AI & LLMs",
+            "AWS Cloud",
+            "Python & Java Backend",
+            "RAG & Agentic AI"
         ]
     },
 
     "proyects": {
-        "proyect1": "Table-games events managements android app.",
+        "proyect1": "Table-games events management Android app.",
         "proyect2": "Android game.",
-        "proyect3": "Website for tourism quality management in the Subbética region",
+        "proyect3": "Website for tourism quality management in the Subbética region.",
         "proyect4": "AI project implementing a content-based anime recommendation system that analyzes user preferences and uses TF-IDF and SVD to suggest similar titles not yet watched.",
         "proyects": "Projects",
         "proyectsDesc": "Projects developed by me, direct link to GitHub repository."

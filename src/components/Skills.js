@@ -87,7 +87,7 @@ export const Skills = () => {
                         <p>{texts.skill.text}</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                              <CircularProgressWithLabel value={50} />
+                              <CircularProgressWithLabel value={85} />
                               <h5>{texts.skill.toRotate[0]}</h5>
                             </div>
                             <div className="item">
@@ -95,12 +95,20 @@ export const Skills = () => {
                               <h5>{texts.skill.toRotate[1]}</h5>
                             </div>
                             <div className="item">
-                              <CircularProgressWithLabel value={75} />
+                              <CircularProgressWithLabel value={85} />
                               <h5>{texts.skill.toRotate[2]}</h5>
                             </div>
                             <div className="item">
-                              <CircularProgressWithLabel value={70} />
+                              <CircularProgressWithLabel value={75} />
                               <h5>{texts.skill.toRotate[3]}</h5>
+                            </div>
+                            <div className="item">
+                              <CircularProgressWithLabel value={80} />
+                              <h5>Spring Boot</h5>
+                            </div>
+                            <div className="item">
+                              <CircularProgressWithLabel value={70} />
+                              <h5>Docker & DevOps</h5>
                             </div>
                         </Carousel>
                     </div>

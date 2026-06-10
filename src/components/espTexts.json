@@ -10,25 +10,25 @@
     "banner": {
         "tagline": "Bienvenido a mi sitio web personal",
         "txtRotate": "¡Hola! Soy Alejandro",
-        "txt": "En esta página puedes ver mis habilidades y experiencia destacadas en desarrollo Java, SQL, Angular, C# y Python. Además, he estado trabajando con Kotlin, MongoDB e Hibernate, y sigo aprendiendo constantemente para mejorar mis habilidades.",
-        "toRotate": ["Desarrollo Java", "Desarrollo Kotlin", "ArquitectoCloud (AWS)"]
+        "txt": "Generative AI Engineer con experiencia en producción diseñando sistemas basados en LLMs, RAG y Agentic AI sobre AWS. Experto en integrar Bedrock, Lambda y Python para automatizar procesos empresariales reales. Sólida base en backend Java y arquitecturas cloud escalables.",
+        "toRotate": ["Generative AI Engineer", "AWS Cloud Engineer", "Backend Developer"]
     },
 
     "skill": {
         "skill": "Habilidades",
         "text": "Stack tecnológico destacado",
         "toRotate": [
-            "Desarrollo Kotlin",
-            "Desarrollo Java",
-            "AWS",
-            "Desarrollo SQL"
+            "IA Generativa & LLMs",
+            "AWS Cloud",
+            "Backend Python & Java",
+            "RAG & Agentic AI"
         ]
     },
 
     "proyects": {
         "proyect1": "Aplicación android para gestionar eventos de juegos de mesa.",
         "proyect2": "Juego de Android.",
-        "proyect3": "Sitio web sobre gestión de la calidad del turismo en la región de la Subbética",
+        "proyect3": "Sitio web sobre gestión de la calidad del turismo en la región de la Subbética.",
         "proyect4": "Proyecto de IA que implementa un sistema de recomendación de anime basado en contenido, analizando los gustos del usuario y usando TF-IDF y SVD para sugerir títulos similares aún no vistos.",
         "proyects": "Proyectos",
         "proyectsDesc": "Proyectos desarrollados por mí, enlace directo al repositorio de GitHub."
